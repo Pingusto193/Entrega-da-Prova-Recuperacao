@@ -1,38 +1,220 @@
-ARQUIVOS PARA ALTERAR CONFORME O TEMA
+Excluir esta tarefa?
 
-db.js: password (senha do PostgreSQL) e database (no
-me do banco).
-sql.sql: tabela tarefa e nomes/tipos dos campos.
-server.js: rotas /tarefas, consultas SQL e validação dos campos.
-public/index.html: textos e inputs.
-public/js/tarefas.js: campos titulo e descricao e endereços /tarefas.
+por:
+Excluir este produto?
 
-Cadastro, login e lista ficam em public/index.html.
-public/js/acesso.js controla cadastro e login.
-public/js/funcoes.js faz as chamadas ao servidor e o logout.
-
-Mantenha usuario, id_usuario, req.usuario.id e os filtros por id_usuario.
-Troque os mesmos nomes no banco, servidor, HTML e JavaScript.
-CREATE TABLE IF NOT EXISTS não modifica tabelas existentes.
-
-Para rodar: npm install e depois npm run dev.
-Abra http://localhost:3000.
+Pronto. Para outro tema, coloque o nome desejado no lugar de “produto”. Os nomes dos arquivos, IDs, variáveis e rotas continuam iguais.
 
 
-## 1. Preparar
 
-Crie uma pasta e abra no VS Code. No terminal dessa pasta:
 
-```bash
-npm init -y
-npm install express@5 pg bcryptjs jsonwebtoken cookie-parser cors
-npm install -D nodemon
-```
 
-Depois substitua o package.json pelo arquivo abaixo. Crie as pastas public e public/js.
 
-## 2. Banco (pgAdmin)
 
-No pgAdmin, conectado ao PostgreSQL, crie um banco chamado `base_prova` (Databases → Create → Database).
-Abra o Query Tool DESSE banco, cole o conteúdo de sql.sql abaixo e execute.
-No db.js, troque a senha `senai` pela senha do seu PostgreSQL.
+
+
+
+
+
+
+
+deixe tudo em um arquivo de texto
+
+
+
+
+
+
+
+
+
+
+
+
+
+Trabalhou por 29 s
+
+
+
+
+
+
+Tudo organizado por arquivo, mostrando o que procurar e pelo que trocar.
+
+Como_Mudar_Tema_Front.txtDocumento
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Selecionar modeloGPT-6.1 SolMédioNenhumaMínimoLeveMédioAltoExtra altoMaxUltraPersistente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Como Mudar Tema Front
+
+ 
+
+Compartilhar
+
+
+COMO MUDAR O TEMA NA TELA
+
+Exemplo: trocar a lista de tarefas por uma lista de produtos.
+Altere somente os textos indicados abaixo.
+
+
+1. ARQUIVO: public/index.html
+
+Este arquivo contém os campos e o texto da aba do navegador.
+
+Procure:
+<title>Lista de tarefas</title>
+
+Troque por:
+<title>Lista de produtos</title>
+
+
+Procure:
+<input id="titulo" placeholder="Título" maxlength="200" required>
+
+Troque por:
+<input id="titulo" placeholder="Nome do produto" maxlength="200" required>
+
+
+Procure:
+<input id="descricao" placeholder="Descrição">
+
+Troque por:
+<input id="descricao" placeholder="Descrição do produto">
+
+O placeholder é o texto que aparece dentro do campo vazio.
+Mantenha id="titulo" e id="descricao" iguais.
+
+
+2. ARQUIVO: public/js/acesso.js
+
+Este arquivo coloca o nome do usuário na tela.
+
+Procure:
+document.getElementById('boasVindas').textContent = 'Lista de ' + usuario.nome
+
+Troque por:
+document.getElementById('boasVindas').textContent = 'Produtos de ' + usuario.nome
+
+Exemplo do resultado na tela:
+Produtos de Cleyton
+
+
+3. ARQUIVO: public/js/tarefas.js
+
+Este arquivo contém as mensagens da lista.
+Use Ctrl + H no VS Code para substituir os textos.
+
+Procure:
+Nenhuma tarefa.
+
+Troque por:
+Nenhum produto.
+
+
+Procure:
+Excluir esta tarefa?
+
+Troque por:
+Excluir este produto?
+
+Mantenha as aspas e o restante do código como estão.
+
+
+PARA USAR OUTRO TEMA
+
+No lugar de produto/produtos, escreva o tema da prova.
+Exemplos: livro/livros, serviço/serviços ou chamado/chamados.
+
+Não renomeie arquivos, IDs, variáveis ou rotas para mudar apenas
+os textos da tela.
+
+Depois de salvar os arquivos com Ctrl + S, atualize a página.
