@@ -1,0 +1,38 @@
+ARQUIVOS PARA ALTERAR CONFORME O TEMA
+
+db.js: password (senha do PostgreSQL) e database (no
+me do banco).
+sql.sql: tabela tarefa e nomes/tipos dos campos.
+server.js: rotas /tarefas, consultas SQL e validação dos campos.
+public/index.html: textos e inputs.
+public/js/tarefas.js: campos titulo e descricao e endereços /tarefas.
+
+Cadastro, login e lista ficam em public/index.html.
+public/js/acesso.js controla cadastro e login.
+public/js/funcoes.js faz as chamadas ao servidor e o logout.
+
+Mantenha usuario, id_usuario, req.usuario.id e os filtros por id_usuario.
+Troque os mesmos nomes no banco, servidor, HTML e JavaScript.
+CREATE TABLE IF NOT EXISTS não modifica tabelas existentes.
+
+Para rodar: npm install e depois npm run dev.
+Abra http://localhost:3000.
+
+
+## 1. Preparar
+
+Crie uma pasta e abra no VS Code. No terminal dessa pasta:
+
+```bash
+npm init -y
+npm install express@5 pg bcryptjs jsonwebtoken cookie-parser cors
+npm install -D nodemon
+```
+
+Depois substitua o package.json pelo arquivo abaixo. Crie as pastas public e public/js.
+
+## 2. Banco (pgAdmin)
+
+No pgAdmin, conectado ao PostgreSQL, crie um banco chamado `base_prova` (Databases → Create → Database).
+Abra o Query Tool DESSE banco, cole o conteúdo de sql.sql abaixo e execute.
+No db.js, troque a senha `senai` pela senha do seu PostgreSQL.

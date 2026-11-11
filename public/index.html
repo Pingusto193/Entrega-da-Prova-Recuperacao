@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista de tarefas</title>
+</head>
+<body>
+<div id="acesso">
+  <p>Entrar</p>
+  <form id="formLogin">
+    <input id="login" placeholder="Login" maxlength="100" required>
+    <input id="senha" type="password" placeholder="Senha" required>
+    <button>Entrar</button>
+  </form>
+  <p>Criar conta</p>
+  <form id="formCadastro">
+    <input id="nomeCadastro" placeholder="Nome" maxlength="100" required>
+    <input id="loginCadastro" placeholder="Login" maxlength="100" required>
+    <input id="senhaCadastro" type="password" placeholder="Senha" required>
+    <button>Cadastrar</button>
+  </form>
+</div>
+<div id="areaLista" hidden>
+  <p><span id="boasVindas">Minha lista</span> <button type="button" onclick="sair()">Sair</button></p>
+  <form id="formulario">
+    <input type="hidden" id="id">
+    <p><input id="titulo" placeholder="Título" maxlength="200" required></p>
+    <p><input id="descricao" placeholder="Descrição"></p>
+    <p>
+      <button>Salvar</button>
+      <button type="button" onclick="limpar()">Limpar</button>
+    </p>
+  </form>
+  <div id="lista"></div>
+</div>
+<script src="js/funcoes.js"></script>
+<script src="js/tarefas.js"></script>
+<script src="js/acesso.js"></script>
+</body>
+</html>
